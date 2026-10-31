@@ -8,7 +8,7 @@ Aplicativo de apoio ao operador de SARP Categoria 0 (DJI Mavic 3 Pro, Mavic Air 
 |---|---|
 | **Versão** | 1.1 |
 | **Atualizado em** | 31/10/2026 |
-| **Desenvolvido por** | Emanuel Santos |
+| **Desenvolvido por** | Sgt Emanuel Santos |
 | **Direitos autorais** | © 2026 Emanuel Santos |
 
 ## O que o app tem
