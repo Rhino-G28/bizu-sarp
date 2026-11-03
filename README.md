@@ -6,20 +6,21 @@ Aplicativo de apoio ao operador de SARP Categoria 0 (DJI Mavic 3 Pro, Mavic Air 
 
 | | |
 |---|---|
-| **Versão** | 1.1 |
-| **Atualizado em** | 31/10/2026 |
+| **Versão** | 1.2 |
+| **Atualizado em** | 02/11/2026 |
 | **Desenvolvido por** | Sgt Emanuel Santos |
-| **Direitos autorais** | © 2026 Emanuel Santos |
+| **Direitos autorais** | © 2026 Sgt Emanuel Santos |
 
 ## O que o app tem
 
 - Ficha de Gerenciamento do Risco (FGR) com cálculo e PDF
 - Check list de voo por fase (montagem, pré-voo, intervoo, pós-voo, desmontagem) para cada modelo
-- Pilotagem: comandos do controle em Modo 2, régua de alturas dos obstáculos, sensores, Home Point, manobras da FRVI e manobras de filmagem
+- Aprender: conhecimentos gerais, teoria de voo (com os sensores ilustrados), tráfego aéreo (classes do espaço aéreo, serviços ATS e alerta, espaços condicionados, FRZ de aeródromo e heliponto, sinais luminosos da torre, fraseologia) e glossário com mais de 150 siglas
+- Pilotagem: comandos do controle em Modo 2, régua de alturas dos obstáculos, sensores, AirSense (ADS-B), Home Point, manobras da FRVI e manobras de filmagem
 - Registro de panes, conduta em pane e rascunho de RELPREV
 - Relatório de voo em PDF
 - Ficha de avaliação de voo (FRVI) por instruendo, com cópia de segurança
-- Meteorologia (brief MET e links), normas e acesso ao espaço aéreo
+- Meteorologia (brief MET e links), normas e acesso ao espaço aéreo atualizados pela ICA 100-40 de 2026 (SARPAS e app SARPAS Lite), e quadro da EB70-N-13.001 com o que vale para o operador
 
 ## Condições de uso
 
@@ -61,5 +62,6 @@ Depois de instalado, o app abre sem internet. Quando houver versão nova, ela é
 
 | Versão | Data | Principais mudanças |
 |---|---|---|
+| 1.2 | 02/11/2026 | Tela de Início; abas em três seções (Voo, Aprender, Instrutor) com barra embaixo no celular; novas abas Conhecimentos gerais, Teoria de voo, Tráfego aéreo e Glossário; quadro AirSense (ADS-B); régua de alturas e figuras com fotos e animação; controle DJI RC e drone em foto real; FRZ de aeródromo e heliponto (ICA 100-40 de 2026) com avião e helicóptero animados; sinais luminosos da torre; espaços condicionados; quadro da EB70-N-13.001 (Port 333-COTER/2023); prazos do SARPAS e legislação atualizados para a ICA 100-40 de 2026; legendas das fotos em caixa escura |
 | 1.1 | 31/10/2026 | Fotos ilustrativas nas manobras, setas do trajeto, rotores girando (manobras e régua), pinos do controle animados nas manobras de filmagem, novos ícones do pedido de voo, fichas da FRVI por instruendo com cópia de segurança |
 | 1.0 | 30/10/2026 | Primeira versão publicada com identificação de autoria e condições de uso |
