@@ -1,13 +1,13 @@
 # Bizu do Operador SARP
 
-Aplicativo de apoio ao operador de SARP Categoria 0 (DJI Mavic 3 Pro, Mavic Air 2 e Mini 2). Funciona no celular, no tablet e no computador, com e sem internet.
+Aplicativo de apoio ao operador de SARP Categoria 0 (DJI Mavic 3 Pro, Air 2S e Mini 2). Funciona no celular, no tablet e no computador, com e sem internet.
 
 **Acesse:** https://rhino-g28.github.io/bizu-sarp/
 
 | | |
 |---|---|
-| **Versão** | 1.2 |
-| **Atualizado em** | 02/11/2026 |
+| **Versão** | 1.3 |
+| **Atualizado em** | 21/11/2026 |
 | **Desenvolvido por** | Sgt Emanuel Santos |
 | **Direitos autorais** | © 2026 Sgt Emanuel Santos |
 
@@ -15,12 +15,13 @@ Aplicativo de apoio ao operador de SARP Categoria 0 (DJI Mavic 3 Pro, Mavic Air 
 
 - Ficha de Gerenciamento do Risco (FGR) com cálculo e PDF
 - Check list de voo por fase (montagem, pré-voo, intervoo, pós-voo, desmontagem) para cada modelo
-- Aprender: conhecimentos gerais, teoria de voo (com os sensores ilustrados), tráfego aéreo (classes do espaço aéreo, serviços ATS e alerta, espaços condicionados, FRZ de aeródromo e heliponto, sinais luminosos da torre, fraseologia) e glossário com mais de 150 siglas
+- Aprender: conhecimentos gerais, teoria de voo (com os sensores ilustrados), tráfego aéreo (classes do espaço aéreo, serviços ATS e alerta, espaços condicionados, FRZ de aeródromo e heliponto, sinais luminosos da torre, fraseologia, comparação VLOS, EVLOS, BVLOS e FPV com cenas animadas, modelos DJI com projeto autorizado pela ANAC, altura AGL com calculadora, operação aérea especial e mapa do espaço aéreo do DECEA) e glossário com mais de 150 siglas
 - Pilotagem: comandos do controle em Modo 2, régua de alturas dos obstáculos, sensores, AirSense (ADS-B), Home Point, manobras da FRVI e manobras de filmagem
+- Voo BVLOS: requisitos, prazos, vigilância do espaço aéreo e checklist
 - Registro de panes, conduta em pane e rascunho de RELPREV
 - Relatório de voo em PDF
 - Ficha de avaliação de voo (FRVI) por instruendo, com cópia de segurança
-- Meteorologia (brief MET e links), normas e acesso ao espaço aéreo atualizados pela ICA 100-40 de 2026 (SARPAS e app SARPAS Lite), e quadro da EB70-N-13.001 com o que vale para o operador
+- Meteorologia (brief MET e links), normas e acesso ao espaço aéreo atualizados pela ICA 100-40 de 2026 (SARPAS e app SARPAS Lite), quem cuida de quê (ANAC, ANATEL, DECEA, JJAER e Exército), categorias de operação, cadastro SARP SMEM × ARP não SMEM, responsabilidades por função e quadro da EB70-N-13.001 com o que vale para o operador
 
 ## Condições de uso
 
@@ -62,6 +63,7 @@ Depois de instalado, o app abre sem internet. Quando houver versão nova, ela é
 
 | Versão | Data | Principais mudanças |
 |---|---|---|
+| 1.3 | 23/11/2026 | Nova aba Voo BVLOS (pode ou não, linha do tempo do pedido, vigilância por classe do espaço aéreo, checklist e o que fazer se der errado); planejamento da área de voo com mapa real (mapa, satélite e relevo), camadas do DECEA (GeoAISWEB), desenho de círculo, retângulo ou polígono com área e coordenadas, atalho para o mapa público do DASA e para NOTAM, cartas e METAR do aeródromo; precisa de internet; quadro de classificação do Exército conferido; setas nos pinos do Modo 2; local de pouso em laranja no acionamento dos rotores; categoria certificada no verificador; perfil da FRZ do aeródromo (ZAD) com avião em aproximação; verificador de categoria redesenhado; destaque na operação aérea especial; Altura AGL com o caso de decolar do topo do morro; normas do EB de 2026 (SIPAAerEx EB20-N-03.003, logística SARP do COLOG EB40-N-40.402 e outras) e “Aconteceu algo?” atualizado; menos repetição entre cards; DJI Air 2S no lugar do Mavic Air 2, com os dados do manual (vento 10,7 m/s, RTH de segurança após 6 s, modo Cine, sensores, LEDs e AirSense); novos cards: Quem cuida de quê (ANAC, ANATEL, DECEA, JJAER e Exército), Categorias aberta, específica e certificada com verificador, cadastro SARP SMEM × ARP não SMEM (SISANT), Quem responde pelo quê (OM, piloto, observador, equipe, Cmt e Of Prevenção), Altura AGL com calculadora (prédio e morro) e Operação aérea especial com verificador; Comparação VLOS, EVLOS, BVLOS e FPV com quatro cenas animadas e tabela com altura, distância e o que dizem ANAC (RBAC 100), DECEA (ICA 100-40) e Exército (EB70-N-13.001); modelos DJI com projeto autorizado pela ANAC (VLOS, EVLOS e BVLOS) e a lista completa da ANAC; correção: FPV só conta como BVLOS sem observador; cores com mais contraste (WCAG AA); animações pausam fora da tela para poupar bateria; descrições das figuras para leitor de tela; PDFs sem as abas de navegação; planejamento da área de voo em 4 etapas (Área, Camadas, Dados, Conferir) com aviso e atalhos quando o mapa não carrega e zoom automático no círculo; foto própria no topo das seções Voo, Aprender e Instrutor; botão Início do mesmo tamanho dos demais; conferência geral: contraste do modo escuro (FGR, áreas do espaço aéreo, categorias, botões verdes), link do RINDAT em https; "Estou apto a voar?" antes da FGR (N Op 2.2.4 e 2.5); nova aba Voo 6 Caderneta do operador (voos, horas, baterias, limite do Quadro 2-1, planilha CSV); visual mais moderno (títulos e números); BVLOS: "Quem vigia o céu em volta" refeito em 4 camadas (segregar, coordenar, vigiar, alertar) com figura animada militares x radar (drone e helicóptero realistas, sobre foto aérea, piloto marcado com o controle); Altura AGL com foto real de fundo em cada cenário; check list (montagem): "Como baixar o mapa offline" no controle, por modelo |
 | 1.2 | 02/11/2026 | Tela de Início; abas em três seções (Voo, Aprender, Instrutor) com barra embaixo no celular; novas abas Conhecimentos gerais, Teoria de voo, Tráfego aéreo e Glossário; quadro AirSense (ADS-B); régua de alturas e figuras com fotos e animação; controle DJI RC e drone em foto real; FRZ de aeródromo e heliponto (ICA 100-40 de 2026) com avião e helicóptero animados; sinais luminosos da torre; espaços condicionados; quadro da EB70-N-13.001 (Port 333-COTER/2023); prazos do SARPAS e legislação atualizados para a ICA 100-40 de 2026; legendas das fotos em caixa escura |
 | 1.1 | 31/10/2026 | Fotos ilustrativas nas manobras, setas do trajeto, rotores girando (manobras e régua), pinos do controle animados nas manobras de filmagem, novos ícones do pedido de voo, fichas da FRVI por instruendo com cópia de segurança |
 | 1.0 | 30/10/2026 | Primeira versão publicada com identificação de autoria e condições de uso |

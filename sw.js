@@ -1,5 +1,5 @@
-/* Bizu do Operador SARP - funcionamento sem internet. Versão: 20261102-213640 */
-var CACHE = "bizu-sarp-20261102-213640";
+/* Bizu do Operador SARP - funcionamento sem internet. Versão: 20261124-104314 */
+var CACHE = "bizu-sarp-20261124-104314";
 var CORE = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
@@ -14,6 +14,8 @@ self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
   var url = new URL(req.url);
+  /* mapa: blocos do OpenStreetMap e do GeoAISWEB não vão para o cache (são muitos e mudam) */
+  if (/(^|\.)tile\.openstreetmap\.org$|(^|\.)tile\.opentopomap\.org$|^server\.arcgisonline\.com$|^geoaisweb\.decea\.mil\.br$/.test(url.hostname)) return;
   if (req.mode === "navigate" && url.origin === location.origin) {
     /* página: tenta a versão nova (até 4 s); sem sinal, abre a guardada */
     e.respondWith(timeout(4000, fetch(req)).then(function (r) {
