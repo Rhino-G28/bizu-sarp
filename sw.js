@@ -1,5 +1,5 @@
-/* Bizu do Operador SARP - funcionamento sem internet. Versão: 20261124-134026 */
-var CACHE = "bizu-sarp-20261124-134026";
+/* Bizu do Operador SARP - funcionamento sem internet. Versão: 20261124-203103 */
+var CACHE = "bizu-sarp-20261124-203103";
 var CORE = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
