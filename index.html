@@ -1850,10 +1850,14 @@ nav.tabs .tab .eyebrow{font-family:var(--mono)!important}
 .pp-lg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.6mm 3mm;font-size:9pt}.pp-lg b{display:inline-block;width:5mm;text-align:center;color:#C62E3A}
 .pp-s{font-size:8.5pt;color:#444;margin-top:1.5mm!important}
 .pp-p2{break-before:page;page-break-before:always}.pp-c2{display:grid;grid-template-columns:1fr 1.15fr;gap:6mm}.pp-col h4:not(:first-child){margin-top:3mm}.pp-sm{font-size:8.5pt}
-.pp-rt{width:100%;table-layout:fixed;border-collapse:collapse;font-size:8.8pt;margin-bottom:3mm}.pp-col{min-width:0}.pp-rt th,.pp-rt td{border:1px solid #999;padding:.6mm 1.2mm;text-align:left;vertical-align:top;height:6.6mm;font-size:8.3pt}
-.pp-rt th{background:#EEF3E8;height:auto}.pp-rt th:first-child{width:6mm}.pp-rt th:nth-child(2){width:40mm}.pp-rt th:nth-child(3){width:15mm}.pp-rt th:nth-child(4){width:12mm}.pp-rt th:nth-child(5){width:30mm}.pp-rt td:first-child{text-align:center}.pp-rt .pp-ck{text-align:center;font-size:11pt}
+.pp-rt{width:100%;table-layout:fixed;border-collapse:collapse;font-size:8.8pt;margin-bottom:3mm}.pp-col{min-width:0}.pp-rt th,.pp-rt td{border:1px solid #999;padding:.5mm 1.2mm;text-align:left;vertical-align:top;height:6mm;font-size:8.2pt}
+.pp-rt th{background:#EEF3E8;height:auto}.pp-rt th:first-child{width:5%}.pp-rt th:nth-child(2){width:33%}.pp-rt th:nth-child(3){width:13%}.pp-rt th:nth-child(4){width:10%}.pp-rt th:nth-child(5){width:21%}.pp-rt th,.pp-rt td{overflow-wrap:anywhere}.pp-rt td:first-child{text-align:center}.pp-rt .pp-ck{text-align:center;font-size:11pt}
 .pp-sig{margin-top:2mm}.pp-sig td{height:7mm!important}
 
+
+.pp-bar{flex-wrap:wrap;gap:6px}.pp-bb{display:flex;gap:6px}.pp-bar #pp-x{background:#fff}
+.pp-ios{flex-basis:100%;margin:0;font-size:12.5px;line-height:1.4;color:#DCE8C4}
+@media print{body.pl-printing.pp-isios .pp-map{height:118mm!important}body.pl-printing.pp-isios .pp-pg{width:100%!important}body.pl-printing.pp-isios .pp-c2{grid-template-columns:1fr 1fr;gap:3mm}body.pl-printing.pp-isios .pp-rt th,body.pl-printing.pp-isios .pp-rt td{font-size:7.4pt;padding:.4mm .8mm}body.pl-printing.pp-isios .pp-t,body.pl-printing.pp-isios .pp-f{font-size:7.8pt}}
 
 .pl-pa{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.pl-pa .c2-btn{display:inline-flex;align-items:center;gap:6px}
 #plPrint{display:none}
@@ -1863,9 +1867,10 @@ body.pl-printing #plPrint{display:block;position:fixed;inset:0;z-index:600;overf
 .pp-pg{width:281mm;max-width:none;margin:12px auto;background:#fff;padding:6mm;box-sizing:border-box;font:9pt/1.28 Arial,Helvetica,sans-serif;color:#111}
 .pp-h{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #2F6A12;padding-bottom:1.5mm;margin-bottom:2.5mm}
 .pp-h b{display:block;font-size:13pt;color:#2F6A12}.pp-h span{font-size:9pt;color:#444}
-.pp-map{width:100%;height:158mm;border:1px solid #888;margin-bottom:0}
+.pp-map{width:100%;height:148mm;border:1px solid #888;margin-bottom:0}
 .pp-map #c2-map-m{width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;border-radius:0!important}
 .pp-map .leaflet-control-zoom{display:none}
+.pp-cv{display:block;width:100%;height:100%}
 .pp-g{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-bottom:3mm}
 .pp-pg h4{margin:0 0 1.5mm;font-size:10.5pt;color:#2F6A12;border-bottom:1px solid #ccc;padding-bottom:1mm}
 .pp-pg p{margin:0 0 2mm}.pp-d{margin-bottom:2mm;font-size:9.5pt}
@@ -1873,8 +1878,9 @@ body.pl-printing #plPrint{display:block;position:fixed;inset:0;z-index:600;overf
 .pp-t th{background:#EEF3E8}.pp-f td:first-child{width:46%;font-weight:700;background:#F5F7F2}.pp-f td{height:5.2mm;padding:.5mm 1.4mm!important}
 .pp-rec{list-style:none;margin:0;padding:0;font-size:9pt;columns:1}.pp-rec li{margin:0 0 .4mm}
 .pp-n{font-size:7.5pt;color:#555;border-top:1px solid #ccc;padding-top:1mm;margin:1.5mm 0 0}
-@page plland{size:A4 landscape;margin:8mm}
-@media print{body.pl-printing .pp-pg{page:plland}
+@media print{
+ html:has(body.pl-printing),body.pl-printing{height:auto!important;min-height:0!important;margin:0!important;padding:0!important;overflow:visible!important}
+ body.pl-printing .pp-pg:last-child{break-after:avoid;page-break-after:avoid}
  body.pl-printing>*:not(#plPrint){display:none!important}
  body.pl-printing #plPrint{position:static;display:block!important;background:#fff;overflow:visible}
  body.pl-printing .pp-bar{display:none}
@@ -6235,7 +6241,7 @@ function printPlan(){if(!shape||!map)return;var sh=$("plPrint");if(!sh){sh=docum
  var lys=[].map.call(document.querySelectorAll("#c2-map .pl-ly input:checked"),function(c){return c.parentElement.textContent.trim()}).join(" · ")||"nenhuma";
  var nr=[].map.call(document.querySelectorAll("#pl-near .pl-ad-i"),function(a){var n=a.querySelector(".pl-ad-n"),sm=n.querySelector("small");return "<tr><td><b>"+esc(a.querySelector(".pl-ad-c").textContent)+"</b></td><td>"+esc(n.firstChild.textContent)+"</td><td>"+esc(sm?sm.textContent:"")+"</td><td>"+esc(a.querySelector(".pl-ad-d").textContent)+"</td></tr>"}).join("");
  var rcl=[].slice.call(document.querySelectorAll(".s26-cb")),rc=rcl.map(function(c,i){return "<tr><td>"+(i+1)+"</td><td>"+esc(c.nextElementSibling.textContent)+"</td><td class=\"pp-ck\">"+(c.checked?"☑":"☐")+"</td><td></td><td></td><td></td></tr>"}).join("");for(var k=1;k<=2;k++)rc+="<tr><td>"+(rcl.length+k)+"</td><td>Outro: </td><td class=\"pp-ck\">☐</td><td></td><td></td><td></td></tr>";
- sh.innerHTML='<div class="pp-bar"><b>Prévia da impressão · A4 paisagem</b><button type="button" id="pp-x">Fechar</button></div>'+
+ sh.innerHTML='<div class="pp-bar"><b>Prévia · A4 paisagem</b><span class="pp-bb"><button type="button" id="pp-pr">Imprimir</button><button type="button" id="pp-x">Fechar</button></span><p class="pp-ios" id="ppIos" hidden><b>Toque em Imprimir</b> quando o mapa aparecer. Se a janela não abrir, use <b>Compartilhar › Imprimir</b> no Safari. Para PDF, use “Salvar em Arquivos”.</p></div>'+
   '<div class="pp-pg pp-p1"><div class="pp-h"><div><b>Planejamento da área de voo</b><span>Impresso em '+dt+(mn?' · '+mn:'')+'</span></div><span>Folha 1/2 · Bizu do Operador SARP</span></div>'+
   '<div class="pp-map" id="ppMap"><div class="pp-grid" id="ppGrid" aria-hidden="true"></div></div><div class="pp-cn" id="ppCn"></div><p class="pp-n"><b>Camadas:</b> '+esc(lys)+'. Material de apoio; a autorização de voo é a do SARPAS. Mapa: © OpenStreetMap, Esri, OpenTopoMap · camadas DECEA.</p></div>'+
   '<div class="pp-pg pp-p2"><div class="pp-h"><div><b>Dados do planejamento e reconhecimento do local</b><span>Anexo ao Relatório de Voo nº ______ · Data ___/___/______</span></div><span>Folha 2/2 · Bizu do Operador SARP</span></div>'+
@@ -6250,13 +6256,25 @@ function printPlan(){if(!shape||!map)return;var sh=$("plPrint");if(!sh){sh=docum
    '<table class="pp-f pp-sig"><tbody><tr><td>Reconhecimento feito por</td><td></td></tr><tr><td>Data, hora e assinatura</td><td></td></tr></tbody></table>'+
   '</div></div>'+
   '<p class="pp-n">Distância dos aeródromos medida da borda da área; base OurAirports, confirme no AISWEB/ROTAER.</p></div>';
- var el=$("c2-map-m"),home=el.parentNode,nx=el.nextSibling,c0=map.getCenter(),z0=map.getZoom(),done=false,fired=false;
+ var el=$("c2-map-m"),home=el.parentNode,nx=el.nextSibling,c0=map.getCenter(),z0=map.getZoom(),done=false,fired=false;var t0=document.title;var ps=document.createElement("style");ps.id="ppPage";ps.textContent="@page{size:A4 landscape;margin:8mm}";document.head.appendChild(ps);
  $("ppMap").appendChild(el);document.body.classList.add("pl-printing");map.invalidateSize();map.fitBounds(shape.getBounds(),{padding:[28,28],maxZoom:17});
- function back(){if(done)return;done=true;home.insertBefore(el,nx);document.body.classList.remove("pl-printing");sh.innerHTML="";map.invalidateSize();map.setView(c0,z0,{animate:false});try{$("pl-print").focus()}catch(e){}}
+ function back(){if(done)return;done=true;if(el.parentNode!==home)home.insertBefore(el,nx);document.body.classList.remove("pl-printing","pp-isios");sh.innerHTML="";document.title=t0;var ps=$("ppPage");if(ps)ps.remove();map.invalidateSize();map.setView(c0,z0,{animate:false});try{$("pl-print").focus()}catch(e){}}
  $("pp-x").onclick=back;
- function grid(){var g=$("ppGrid"),C="ABCDEFGH",h="";for(var i=0;i<8;i++)h+='<span class="gc" style="left:'+(i*12.5+6.25)+'%">'+C[i]+'</span>';for(var j=0;j<6;j++)h+='<span class="gr" style="top:'+(j*100/6+100/12)+'%">'+(j+1)+'</span>';g.innerHTML=h;var b=map.getBounds();$("ppCn").innerHTML="<span>Canto NO: "+dms(b.getNorth(),"N","S")+" "+dms(b.getWest(),"E","W")+"</span><span>Canto SE: "+dms(b.getSouth(),"N","S")+" "+dms(b.getEast(),"E","W")+"</span>"}
- function go(){if(fired)return;fired=true;grid();window.addEventListener("afterprint",function(){setTimeout(back,300)},{once:true});try{window.print()}catch(e){}}
- hint.textContent="Preparando a impressão…";if(cur){cur.once("load",function(){setTimeout(go,400)})}setTimeout(go,3500)}
+ function grid(){var g=$("ppGrid")||document.createElement("div"),C="ABCDEFGH",h="";for(var i=0;i<8;i++)h+='<span class="gc" style="left:'+(i*12.5+6.25)+'%">'+C[i]+'</span>';for(var j=0;j<6;j++)h+='<span class="gr" style="top:'+(j*100/6+100/12)+'%">'+(j+1)+'</span>';g.innerHTML=h;var b=map.getBounds();$("ppCn").innerHTML="<span>Canto NO: "+dms(b.getNorth(),"N","S")+" "+dms(b.getWest(),"E","W")+"</span><span>Canto SE: "+dms(b.getSouth(),"N","S")+" "+dms(b.getEast(),"E","W")+"</span>"}
+ function snap(){var c=el,r=c.getBoundingClientRect(),W=r.width,H=r.height,k=2,cv=document.createElement("canvas");cv.width=Math.round(W*k);cv.height=Math.round(H*k);cv.className="pp-cv";var g=cv.getContext("2d");g.scale(k,k);g.fillStyle="#E8EAE4";g.fillRect(0,0,W,H);
+ var nt=0;[].forEach.call(c.querySelectorAll(".leaflet-tile-pane img.leaflet-tile"),function(im){if(!im.complete||!im.naturalWidth)return;nt++;var b=im.getBoundingClientRect(),ly=im.closest(".leaflet-layer");g.globalAlpha=ly?(parseFloat(getComputedStyle(ly).opacity)||1):1;try{g.drawImage(im,b.left-r.left,b.top-r.top,b.width,b.height)}catch(e){}});g.globalAlpha=1;
+ g.strokeStyle="#C62E3A";g.fillStyle="rgba(198,46,58,.15)";g.lineWidth=2.5;g.beginPath();
+ if(mode==="circ"&&ctr){var bb=shape.getBounds(),a=map.latLngToContainerPoint(bb.getNorthWest()),z=map.latLngToContainerPoint(bb.getSouthEast());g.ellipse((a.x+z.x)/2,(a.y+z.y)/2,Math.abs(z.x-a.x)/2,Math.abs(z.y-a.y)/2,0,0,Math.PI*2)}
+ else pts.forEach(function(q,i){var p=map.latLngToContainerPoint(q);if(i)g.lineTo(p.x,p.y);else g.moveTo(p.x,p.y)});g.closePath();g.fill();g.stroke();
+ nm.forEach(function(m){var p=map.latLngToContainerPoint(m.getLatLng());g.beginPath();g.arc(p.x,p.y,5,0,Math.PI*2);g.fillStyle=m.options.fillColor;g.fill();g.lineWidth=2;g.strokeStyle="#fff";g.stroke();var tt=m.getTooltip?m.getTooltip():null,lb=tt?String(tt.getContent()).split(" ")[0]:"";if(lb){g.font="bold 11px Arial";g.lineWidth=3;g.strokeStyle="#fff";g.strokeText(lb,p.x+7,p.y-6);g.fillStyle="#111";g.fillText(lb,p.x+7,p.y-6)}});
+ g.strokeStyle="rgba(0,0,0,.5)";g.lineWidth=1;var C="ABCDEFGH";for(var i=1;i<8;i++){g.beginPath();g.moveTo(W*i/8,0);g.lineTo(W*i/8,H);g.stroke()}for(var j=1;j<6;j++){g.beginPath();g.moveTo(0,H*j/6);g.lineTo(W,H*j/6);g.stroke()}
+ g.font="bold 12px Arial";g.textBaseline="top";function lab(s,x,y){var w=g.measureText(s).width+6;g.fillStyle="rgba(255,255,255,.9)";g.fillRect(x,y,w,16);g.fillStyle="#000";g.fillText(s,x+3,y+2)}
+ for(var i2=0;i2<8;i2++)lab(C[i2],W*(i2+.5)/8-6,3);for(var j2=0;j2<6;j2++)lab(String(j2+1),3,H*(j2+.5)/6-8);
+ g.strokeStyle="#333";g.lineWidth=1;g.strokeRect(.5,.5,W-1,H-1);if(!nt){g.font="bold 15px Arial";g.textAlign="center";g.textBaseline="middle";g.fillStyle="#7A1C24";g.fillText("As imagens do mapa não carregaram (sem internet ou dentro do visualizador do Claude).",W/2,H-40);g.font="13px Arial";g.fillText("Abra o app pelo GitHub com internet e imprima de novo, ou desenhe o terreno à caneta sobre a grade.",W/2,H-20);g.textAlign="start"}
+ var bx=$("ppMap");bx.innerHTML="";bx.appendChild(cv);home.insertBefore(el,nx);map.invalidateSize()}
+ var IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);function pr(){try{window.print()}catch(e){}}
+ function go(){if(fired)return;fired=true;grid();snap();document.title="Planejamento da área de voo";hint.textContent="";$("pp-pr").onclick=pr;if(IOS){document.body.classList.add("pp-isios");$("ppIos").hidden=false;try{$("pp-pr").focus()}catch(e){}}else{window.addEventListener("afterprint",function(){setTimeout(back,300)},{once:true});pr()}}
+ hint.textContent="Preparando a impressão…";if(cur){cur.once("load",function(){setTimeout(go,400)})}setTimeout(go,6000)}
 $("pl-print").onclick=printPlan;
 cp.onclick=function(){try{navigator.clipboard.writeText(txt).then(function(){hint.textContent="Dados copiados."},function(){hint.textContent="Não deu para copiar: anote os dados."})}catch(e){hint.textContent="Não deu para copiar: anote os dados."}};
 var ic=$("pl-icao"),go=$("pl-ad-go");ic.oninput=function(){ic.value=ic.value.toUpperCase().replace(/[^A-Z0-9]/g,"");go.href="https://aisweb.decea.mil.br/?i=aerodromos"+(ic.value.length===4?"&codigo="+ic.value:"")};
