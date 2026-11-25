@@ -1884,7 +1884,7 @@ body.pl-printing #plPrint{display:block;position:fixed;inset:0;z-index:600;overf
  body.pl-printing>*:not(#plPrint){display:none!important}
  body.pl-printing #plPrint{position:static;display:block!important;background:#fff;overflow:visible}
  body.pl-printing .pp-bar{display:none}
- body.pl-printing .pp-pg{margin:0;padding:0;width:auto}
+ body.pl-printing .pp-pg{margin:0!important;padding:0 1.5mm 0 0!important;width:auto!important;max-width:100%!important;box-sizing:border-box!important}body.pl-printing .pp-c2{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}body.pl-printing .pp-col{overflow:hidden;padding-right:.5mm}body.pl-printing .pp-rt,body.pl-printing .pp-t,body.pl-printing .pp-f{width:calc(100% - 1px)}
  body.pl-printing .pp-map{break-inside:avoid}
  body.pl-printing .leaflet-control-attribution{font-size:7pt}}
 @media (max-width:900px){.pl-wrap{grid-template-columns:1fr}.c2-map-m{height:58vh}}
