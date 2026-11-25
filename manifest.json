@@ -1,7 +1,7 @@
 {
   "name": "Bizu do Operador SARP",
   "short_name": "Bizu SARP",
-  "description": "Check list, ficha de risco, panes, relatório, meteorologia e normas para SARP Catg 0.",
+  "description": "Planejamento do voo com mapa do DECEA, ficha de risco, check list, panes, relatório, meteorologia, tráfego aéreo e normas para SARP Catg 0.",
   "lang": "pt-BR",
   "start_url": "./",
   "scope": "./",
